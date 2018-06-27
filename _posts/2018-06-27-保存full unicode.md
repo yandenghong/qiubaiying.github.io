@@ -16,13 +16,13 @@ tags:
 ## 正文
 
 ### 问题
-![](../img/post-mysql-error.png)
+![Alt text](../img/post-mysql-error.png)
 
 > 图为：向mysql中插入数据时出现的问题
 
 ### 分析
 
-![](../img/error_data.png)
+![Alt text](../img/error_data.png)
 > 图为：出错的数据(没错, 是emoji)
 
 这种emoji表情的存储需要mysql版本大于等于5.5.3。
@@ -37,12 +37,12 @@ mysql插入emoji时会出现上述异常。
 django 获取mysql连接的源码: django/db/backends/mysql/base/DatabaseWrapper
 
 
-![](../img/post-get_connection.png)
+![Alt text](../img/post-get_connection.png)
 > 图为:django 获取mysql连接的源码
 
 从源码中的'kwargs'可以看到, django和mysql建立的连接默认是utf8字符集, 也就是说,在django中如果要变更连接的字符集,需要显式指定。
 
-![](../img/post-database_setting.png)
+![Alt text](../img/post-database_setting.png)
 > 图为: 显式指定charset
 
 这样修改后, 问题得到了解决。
