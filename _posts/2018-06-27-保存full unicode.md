@@ -4,7 +4,7 @@ title:      保存full unicode数据
 subtitle:   django+mysql
 date:       2018-06-27
 author:     yandenghong
-header-img: img/post-bg-supercar.jpg
+header-img: img/post-bg-universe.jpg
 catalog: true
 tags:
     - Python
