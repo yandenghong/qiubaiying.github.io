@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      django+mysql保存full unicode
+title:      full unicode
 subtitle:   for test
 date:       2018-06-27
 author:     yandenghong
