@@ -1,10 +1,10 @@
 # Site settings
-title: BY Blog
-SEOTitle: 严登闳的博客 | BY Blog
+title: Vincentyim Blog
+SEOTitle: 严登闳的博客 | Vincentyim Blog
 header-img: img/post-bg-desk.jpg
 email: vincentyim8@163.com
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 严登闳的博客, vincentyim, 严, iOS, Apple, iPhone"
+keyword: "严登闳, 严登闳的博客, vincentyim, python"
 url: "http://yandenghong.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/yandenghong/yandenghong.github.io.git" # you code repository
@@ -104,11 +104,5 @@ friends: [
     },{
         title: "telegram",
         href: "https://t.me/BanyanNetworkBot"
-    },{
-        title: "Apple",
-        href: "https://apple.com"
-    },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
     }
 ]
