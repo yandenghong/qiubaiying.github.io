@@ -1,6 +1,6 @@
 # Site settings
-title: Vincentyim Blog
-SEOTitle: 严登闳的博客 | Vincentyim Blog
+title: Vincentyim's Blog
+SEOTitle: Vincentyim's Blog | Vincentyim Blog
 header-img: img/post-bg-supercar.jpg
 email: vincentyim8@163.com
 description: "Every failure is leading towards success."
@@ -101,8 +101,5 @@ friends: [
     {
         title: "Henry",
         href: "http://manageyp.github.io"
-    },{
-        title: "telegram",
-        href: "https://t.me/BanyanNetworkBot"
     }
 ]
