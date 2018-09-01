@@ -18,7 +18,7 @@ tags:
 
 另外，因为telegram被墙, 因此这个脚本需要在可科学上网的环境下执行。
 # 正文
-
+···python
     import sys
     import requests
 
@@ -95,6 +95,6 @@ tags:
     if __name__ == '__main__':
         bot = Bot('Your Token')
         bot.batch_kick_chat_member('Your Chat id')
-
+···
 # 执行
 __python3 你的脚本名 电报id的txt文件名(不包含.txt)__
