@@ -4,7 +4,7 @@ title:      nginx+uwsgi+django+celery部署日志
 subtitle:   包含了详细的配置与相应说明
 date:       2018-09-14
 author:     yandenghong
-header-img: img/post-moon.jpg
+header-img: img/post-moon.png
 catalog: true
 tags:
     - nginx
