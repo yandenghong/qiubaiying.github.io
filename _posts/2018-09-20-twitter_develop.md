@@ -89,7 +89,7 @@ __注意__：这里注册成功后会返回webhook id，要记下来，后面订
 ## 步骤五：订阅account activity
 
 ```python
-r = twitter_api.request('account_activity/all/:development/subscriptions', {'webhook_id':xxxx, method_override:'POST'})
+r = twitter_api.request('account_activity/all/:development/subscriptions', {'webhook_id':xxxx, 'method_override':'POST'})
 print(r.status_code)
 print(r.text)
 ```
