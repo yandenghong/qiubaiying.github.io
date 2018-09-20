@@ -39,6 +39,7 @@ tags:
 ```python
 import hmac
 import hashlib
+from rest_framework.views import APIView
 
 
 def generate_signature(data):
@@ -47,6 +48,7 @@ def generate_signature(data):
     return hmac.new(key_bytes, data_bytes, hashlib.sha256).digest()
 
 
+# 这里之所以用了django restframework 的APIVIEW是为了去掉csrf验证
 class TwitterWebHookView(APIView):
     """twitter webhook api view"""
     def get(self, request):
