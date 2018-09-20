@@ -74,7 +74,6 @@ class TwitterWebHookView(APIView):
 pip install TwitterAPI
 ```
 ```python
-import requests
 from TwitterAPI import TwitterAPI
 
 # 这里的key和secret不要填错了
@@ -88,13 +87,9 @@ __注意__：这里注册成功后会返回webhook id，要记下来，后面订
 
 
 ## 步骤五：订阅account activity
-这个库是有缺陷的，下面这个订阅，如果用它的twitter api去订阅，它一直发的是GET请求，而订阅是POST请求，issue我已经在github上提了。
 
-所以我用了requests去自己发，认证依然用twitter_api的认证.
 ```python
-r = requests.post(url='https://api.twitter.com/1.1/account_activity/all/development/subscriptions.json',
-                  auth=twitter_api.auth,
-                  data={'webhook_id': 上面的webhook id})
+r = twitter_api.request('account_activity/all/:development/subscriptions', {'webhook_id':xxxx, method_override:'POST'})
 print(r.status_code)
 print(r.text)
 ```
