@@ -4,7 +4,7 @@ title:      修饰器模式
 subtitle:   结构型设计模式
 date:       2018-11-15
 author:     yandenghong
-header-img: img/post-moon.jpg
+header-img: img/post-moon.png
 catalog: true
 tags:
     - 设计模式
