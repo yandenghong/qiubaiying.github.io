@@ -28,6 +28,8 @@ tags:
 
 # 实现
 
+```python
+
 import enum
 import random
 
@@ -70,14 +72,14 @@ def main():
         tree_counter += 1
 
     for _ in range(3):
-        t2 = Tree(TreeType.cherry_tree)
+        t2 = Tree(TreeType.CHERRY_TREE)
         t2.render(rnd.randint(age_min, age_max),
                   rnd.randint(min_point, max_point),
                   rnd.randint(min_point, max_point))
         tree_counter += 1
 
     for _ in range(5):
-        t3 = Tree(TreeType.peach_tree)
+        t3 = Tree(TreeType.PEACH_TREE)
         t3.render(rnd.randint(age_min, age_max),
                   rnd.randint(min_point, max_point),
                   rnd.randint(min_point, max_point))
@@ -86,15 +88,16 @@ def main():
     print('trees rendered: {}'.format(tree_counter))
     print('trees actually created: {}'.format(len(Tree.pool)))
 
-    t4 = Tree(TreeType.cherry_tree)
-    t5 = Tree(TreeType.cherry_tree)
-    t6 = Tree(TreeType.apple_tree)
+    t4 = Tree(TreeType.CHERRY_TREE)
+    t5 = Tree(TreeType.CHERRY_TREE)
+    t6 = Tree(TreeType.APPLE_TREE)
     print('{} == {}? {}'.format(id(t4), id(t5), id(t4) == id(t5)))
     print('{} == {}? {}'.format(id(t5), id(t6), id(t5) == id(t6)))
 
 
 if __name__ == '__main__':
     main()
+```
 
 # 总结
 
