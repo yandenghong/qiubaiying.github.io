@@ -103,7 +103,7 @@ Entry.objects.extra(where=['headline=%s'], params=['Lennon'])
 现在回到上面的需求,我们只需这样写:
 ```python
 ordering = 'FIELD(`scale`, {})'.format(','.join(["'{}'".format(i) for i in ["低", "较低", "中", "较高", "高"]]))
-data = DemoDatabaseClass.extra(select={'ordering': ordering}, order_by=('-ordering',))
+data = DemoDatabaseClass.objects.extra(select={'ordering': ordering}, order_by=('-ordering',))
 ```
 
 ## 总结
