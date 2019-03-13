@@ -155,10 +155,10 @@ nginx首先搜索由文字字符串给出的最具体的prefix location，而不
 
 现在让我们看看如何在上面的配置中处理请求：
 
-* 请求"/logo.gif"首先与前缀location "/"匹配，然后由正则表达式"\.(gif|jpg|png)$"匹配，因此，它由后一个location处理。
-* 请求"/index.php"也首先与前缀location "/"匹配，然后由正则表达式"\.(php)$"匹配。因此，它由后一个location处理，请求被传递给侦听localhost：9000的FastCGI服务器。 fastcgi_param指令将FastCGI参数SCRIPT_FILENAME设置为“/data/www/index.php”，FastCGI服务器执行该文件。变量$document_root等于root指令的值，变量$fastcgi_script_name等于请求URI，即"/index.php"。
-* 请求"/about.html"仅与前缀location "/"匹配, 因此, 它由此location处理。使用指令"root /data/www"将请求映射到文件/data/www/about.html，并将文件发送到客户端。
-* 处理请求"/"更复杂。它仅与前缀location"/"匹配，因此，它由此location处理。然后index指令根据其参数和"root /data/www"指令测试索引文件是否存在。如果文件/data/www/index.html不存在，并且文件/data/www/index.php存在，则指令执行内部重定向到"/index.php"，并且nginx再次搜索location, 就好像请求是由客户端发送的一样。正如我们之前看到的，重定向的请求最终将由FastCGI服务器处理。
+* 请求`/logo.gif`首先与前缀location `/`匹配，然后由正则表达式`\.(gif|jpg|png)$`匹配，因此，它由后一个location处理。
+* 请求`/index.php`也首先与前缀location `/`匹配，然后由正则表达式`\.(php)$`匹配。因此，它由后一个location处理，请求被传递给侦听localhost：9000的FastCGI服务器。 fastcgi_param指令将FastCGI参数SCRIPT_FILENAME设置为`/data/www/index.php`，FastCGI服务器执行该文件。变量$document_root等于root指令的值，变量$fastcgi_script_name等于请求URI，即`/index.php`。
+* 请求`/about.html`仅与前缀location `/`匹配, 因此, 它由此location处理。使用指令"root /data/www"将请求映射到文件/data/www/about.html，并将文件发送到客户端。
+* 处理请求`/`更复杂。它仅与前缀location `/`匹配，因此，它由此location处理。然后index指令根据其参数和`root /data/www`指令测试索引文件是否存在。如果文件/data/www/index.html不存在，并且文件/data/www/index.php存在，则指令执行内部重定向到`/index.php`，并且nginx再次搜索location, 就好像请求是由客户端发送的一样。正如我们之前看到的，重定向的请求最终将由FastCGI服务器处理。
 
 
 
