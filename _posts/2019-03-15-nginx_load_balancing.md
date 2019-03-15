@@ -62,10 +62,11 @@ upstream demo_server {
     }
 ```
 ### 可选的状态参数
-* down: 表示当前的服务器暂时不参与负载均衡。
-* backup: 表示当前服务器为备用服务器。
-* max_fails: 允许请求失败的次数，默认为1。当超过最大次数时，返回proxy_next_upstream 模块定义的错误。
-* fail_timeout: 当在fail_timeout的时间内，某个server连接失败了max_fails次，则nginx会认为该server不工作了。同时，在接下来的 fail_timeout时间内，nginx不再将请求分发给失效的server。
+* `down`: 表示当前的服务器暂时不参与负载均衡。
+* `backup`: 表示当前服务器为备用服务器。
+* `max_fails`: 允许请求失败的次数，默认为1。当超过最大次数时，返回`proxy_next_upstream` 模块定义的错误。
+* `fail_timeout`: 当在`fail_timeout`的时间内，某个server连接失败了`max_fails`次，则nginx会认为该server不工作了。同时，在接下来的`fail_timeout`时间内，nginx不再将请求分发给失效的server。
+
 ```text
 upstream demo_server { 
       server 192.168.1.120:2333 weight=1 max_fails=2 fail_timeout=2; 
