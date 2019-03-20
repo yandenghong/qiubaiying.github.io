@@ -8,7 +8,7 @@ header-img: img/post-moon.png
 catalog: true
 tags:
     - 设计模式
-    - python
+    - Python
 ---
 
 ## 介绍

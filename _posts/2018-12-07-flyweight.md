@@ -8,7 +8,7 @@ header-img: img/sky-min.jpg
 catalog: true
 tags:
     - 设计模式
-    - python
+    - Python
 ---
 
 # 场景
