@@ -60,7 +60,7 @@ error_log    <FILE>    <LEVEL>
 
 * 日志文件：可以指定任意存放日志的目录。
 
-* 错误日志级别：常见的错误日志级别有[debug | info | notice | warn | error | crit | alert | emerg]，级别越高记录的信息越少。
+* 错误日志级别：常见的错误日志级别有`debug`, `info`, `notice`, `warn`, `error`, `crit`, `alert`, `emerg`，级别越高记录的信息越少。
 
 * 生产场景一般是 `warn`, `error`, `crit`这三个级别之一。
 
@@ -120,6 +120,7 @@ context:events
 nginx作为http服务器的时候：
     
     max_clients = worker_processes * worker_connections
+
 nginx作为反向代理服务器的时候：
     
     max_clients = worker_processes * worker_connections/4
@@ -266,7 +267,7 @@ gzip_vary on; # 和http头有关系，加个vary头，给代理服务器用的�
 
 
 
-
+### nginx.conf
 ```text
 user       www www;  ## Default: nobody
 worker_processes  5;  ## Default: 1
@@ -339,6 +340,7 @@ http {
   }
 }
 ```
+
 ## proxy.conf
 * `proxy_redirect`: 当上游服务器返回的响应是重定向或刷新请求（如HTTP响应码是301或者302）时，`proxy_redirect`可以重设HTTP头部的location或refresh字段。
 
