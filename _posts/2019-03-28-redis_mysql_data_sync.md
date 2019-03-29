@@ -85,7 +85,11 @@ from my_utils import redis_cli
 class Book(models.Model):
     name = models.CharField("名称", max_length=16, db_index=True)
     category = models.CharField("种类", max_length=16, db_index=True)
-    
+    # 新增的两个字段
+    is_cached = models.BooleanField("是否已被缓存", default=False)
+    is_expired = models.BooleanField("是否已过期", default=False)
+
+
 # post_save 即写入/新增的信号
 @receiver(post_save, sender=Book)
 def create_map_cache(sender, instance=None, created=False, **kwargs):
