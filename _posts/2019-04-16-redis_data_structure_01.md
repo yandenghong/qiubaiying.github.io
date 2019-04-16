@@ -4,7 +4,7 @@ title:      Redis数据结构之字符串(String)类型
 subtitle:   Redis数据结构
 date:       2019-04-16
 author:     yandenghong
-header-img: img/post-bg-ocean.png
+header-img: img/post-bg-ocean.jpg
 catalog: true
 tags:
     - 数据结构
