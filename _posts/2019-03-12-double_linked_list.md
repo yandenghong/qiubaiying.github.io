@@ -4,7 +4,7 @@ title:      python实现完整的双向链表并快速排序
 subtitle:   
 date:       2019-03-12
 author:     yandenghong
-header-img: img/post-bg-supercar.png
+header-img: img/post-moon.png
 catalog: true
 tags:
     - 数据结构
