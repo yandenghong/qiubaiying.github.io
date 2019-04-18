@@ -36,7 +36,7 @@ class Reservoir:
         接收数据并抽样存储到数据池
         :param data: 接收的数据
         """
-        if data is not None:
+        if data is not None and data not in self.pool:
             # 如果池子满了
             if self.index >= self.pool_capacity:
                 # 从接收到的数据中随机取一个
