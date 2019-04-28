@@ -42,7 +42,7 @@ new([]int)
 
 下面的例子阐述`new`和`make`的区别:
 
-```go
+```text
 　
 
 var	p	*[]int	=	new([]int)							//	allocates	slice	structure;	*p	==	nil;	rarely	useful
