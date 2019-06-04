@@ -15,7 +15,7 @@ tags:
 遍历一个切片，并将切片的值当成映射的键和值存入，切片类型是一个int型，映射的类型是键为int型，值为*int，即值是一个地址。
 
 原来我是这样写的:
-```c
+```text
 package main
 
 import "fmt"
@@ -61,7 +61,7 @@ map[3]=3
 遍历到切片的最后一个元素3时，将3写入了该地址，所以导致映射所有值都相同。
 
 ### 对切片for range 的底层代码
-```c
+```text
 for_temp := range
 len_temp := len(for_temp)
 for index_temp = 0; index_temp < len_temp; index_temp++ {
