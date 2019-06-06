@@ -3,7 +3,7 @@ layout:     post
 title:      Goroutine调度原理
 date:       2019-06-06
 author:     yandenghong
-header-img: img/post-bg-universe.png
+header-img: img/post-bg-universe.jpg
 catalog: true
 tags:
     - Golang
