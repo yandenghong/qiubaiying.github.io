@@ -53,7 +53,7 @@ def max_area_of_island(grid):
 ```
 
 ## Golang
-```golang
+```text
 package main
 
 func maxAreaOfIsland(grid [][]int) int {
