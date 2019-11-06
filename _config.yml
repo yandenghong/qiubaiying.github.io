@@ -103,3 +103,5 @@ friends: [
         href: "http://manageyp.github.io"
     }
 ]
+
+theme: jekyll-theme-cayman
